@@ -6,20 +6,93 @@
 </head>
 
 <body>
-<title>Jacob Ayers</title>
+<title>Senior Research - Jacob Ayers</title>
 <header>
 <ul>
-	<li>Introduction</li>
-	<li>Background and Significance</li>
+	<li>SECTIONS</li>
+	<li>Abstract</li>
+	<li>Setup</li>
+	<li>Data & Graphs</li>
 </ul>
 </header>
-<h1>MySQL vs MongoDB comparison (comparing traditional SQL with NoSQL DBMS)<h1>
+<center><h1>MySQL vs MongoDB comparison (comparing traditional SQL with NoSQL DBMS)<h1></center>
 
 <h2>Abstract</h2>
 
-<p style = "font-size:20px">I compared MongoDB which is a NoSQL or non-relational DBMS with MySQL which is a SQL or relational DBMS. This work is important as both relational and non-relational databases are used worldwide for many critical tasks ranging from business to healthcare. For the fairest comparison possible, I used the Yahoo Cloud Serving Benchmark and ran it a few times on each database for results. I compared both latency and throughput. Latency is essentially how long it takes to complete an operation and throughput is the number of operations completed per second. With 1,000 records, I found that MySQL was outperforming MongoDB in both latency and throughput while with 100 million records, MongoDB showed much better throughput and outperformed MySQL with latency. After looking over the findings, it appears that MongoDB has improved performance as the number of records increases. Depending on the use-case, MySQL seems to be best for data consistency while MongoDB appears to be better optimized for latency.</h3>
+<p style = "font-size:20px">I compared MongoDB which is a NoSQL or non-relational DBMS with MySQL which is a SQL or relational DBMS. This work is important as both relational and non-relational databases are used worldwide for many critical tasks ranging from business to healthcare. For the fairest comparison possible, I used the Yahoo Cloud Serving Benchmark and ran it a few times on each database. For results, I compared both latency and throughput. Latency is essentially how long it takes to complete an operation and throughput is the number of operations completed per second. With 1,000 records, I found that MySQL was outperforming MongoDB in both latency and throughput while with 100 million records, MongoDB showed much better throughput and outperformed MySQL with latency. After looking over the findings, it appears that MongoDB has improved performance as the number of records increases. Depending on the use-case, MySQL seems to be best for data consistency while MongoDB appears to be better optimized for latency.</h3>
 
-<h4>Graphs & Data</h4>
+<h2>Setup</h2>
+<p style="font-size:20px">List of Software used:</p>
+<p style="font-size:20px">
+<br>Windows 10 Home version 1709 64 bit as host OS</br>
+<br>Virtual Box 5.2.6</br>
+<br>Ubuntu Server 16.04 LTS</br>
+<br>YCSB Version 0.12</br>
+<br>JDK 8</br>
+<br>Maven 3.39</br>
+<br>MySQL 5.7.21</br>
+<br>MongoDB 3.6.3</br>
+<br>Connector/J for MySQL</br>
+</p>
+
+<h2>Graphs & Data</h2>
+<p style = "font-size:20px">To view some raw data samples from my GitHub repository, click <a href="https://github.com/Jacob-Ayers/SQL-vs-NoSQL-comparison">here</a></p>
+<p style = "font-size:20px">MongoDB Workload A successful run CSV data sample: </p>
+<p style = "font-size:22px">
+[OVERALL], RunTime(ms), 21032.0
+
+[OVERALL], Throughput(ops/sec), 47.54659566375047
+
+[READ], Operations, 483.0
+
+[READ], AverageLatency(us), 19856.707692307693
+
+[READ], MinLatency(us), 2302.0
+
+[READ], MaxLatency(us), 560639.0
+
+[READ], 95thPercentileLatency(us), 45087.0
+
+[READ], 99thPercentileLatency(us), 86207.0
+
+[READ], Return=OK, 483
+[CLEANUP], Operations, 1.0
+
+[CLEANUP], AverageLatency(us), 344.0
+
+[CLEANUP], MinLatency(us), 344.0
+
+[CLEANUP], MaxLatency(us), 344.0
+
+[CLEANUP], 95thPercentileLatency(us), 344.0
+
+[CLEANUP], 99thPercentileLatency(us), 344.0
+
+[UPDATE], Operations, 517.0
+
+[UPDATE], AverageLatency(us), 19487.802083333332
+
+[UPDATE], MinLatency(us), 2392.0
+
+[UPDATE], MaxLatency(us), 288511.0
+
+[UPDATE], 95thPercentileLatency(us), 51519.0
+
+[UPDATE], 99thPercentileLatency(us), 99327.0
+
+[UPDATE], Return=OK, 517
+<br>As you can see, results were returned in terms of us or microseconds so I converted them to ms for the graphs in order to make it more readable</br></p>
+<p style = "font-size:22px"></p>
+<!--Graph Images-->
+<h3>1,000 records results</h3>
+<center><img src="https://raw.githubusercontent.com/Jacob-Ayers/SQL-vs-NoSQL-comparison/master/100m_recordsT.JPG" height="300" width="500">
+<img src="https://raw.githubusercontent.com/Jacob-Ayers/SQL-vs-NoSQL-comparison/master/1000_RecordsL.JPG" height="300" width="500"></center>
+
+
+<h3>100 Million records results</h3>
+<center><img src="https://raw.githubusercontent.com/Jacob-Ayers/SQL-vs-NoSQL-comparison/master/100m_recordsL.JPG" height="300" width="500">
+<img src="https://raw.githubusercontent.com/Jacob-Ayers/SQL-vs-NoSQL-comparison/master/100m_recordsT.JPG" height="300" width="500"></center>
+
 <p style = "text-align:center">Jacob Ayers 2018</p>
 </body>
 </html>
